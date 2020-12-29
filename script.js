@@ -1,11 +1,11 @@
 const canvas = document.querySelector("#draw")
 const ctx = canvas.getContext('2d')
-canvas.width = window.innerWidth
-canvas.height = window.innerHeight
-ctx.strokeStyle = "#BADA55"
+canvas.width = window.innerWidth - 20
+canvas.height = window.innerHeight - 70
+ctx.strokeStyle = "#000000"
 ctx.lineJoin = 'round'
 ctx.lineCap = 'round'
-ctx.lineWidth = 20
+ctx.lineWidth = 5
 
 let isDrawing = false
 
@@ -31,3 +31,19 @@ canvas.addEventListener('mousedown', (e) => {
 })
 canvas.addEventListener('mouseup', () => isDrawing = false)
 canvas.addEventListener('mouseout', () => isDrawing = false)
+
+
+const inputs = document.querySelectorAll('.controls input')
+
+function handleUpdate() {
+    var bColor = document.getElementById("Background").value
+    document.getElementById("draw").style.background = bColor;
+
+    var color = document.getElementById("base").value
+    ctx.strokeStyle = color
+
+    var size = document.getElementById("size").value
+    ctx.lineWidth = size
+}
+inputs.forEach(input => input.addEventListener('change', handleUpdate))
+inputs.forEach(input => input.addEventListener('mousemove', handleUpdate))
