@@ -14,12 +14,13 @@ body {
 canvas {
     background: white;
     margin-top: 1rem;
+    cursor: cell;
 }
 
 button {
     border-radius: 5px;
     margin: 3px;
-    background: blue;
+    background: cadetblue;
     border: none;
     color: white;
     padding: 10px 22px;

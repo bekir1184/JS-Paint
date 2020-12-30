@@ -12,6 +12,9 @@ let isDrawing = false
 let lastX = 0
 let lastY = 0
 
+
+
+//Draw
 function draw(e) {
     if (!isDrawing) return
     ctx.beginPath()
@@ -35,9 +38,9 @@ canvas.addEventListener('mouseout', () => isDrawing = false)
 
 const inputs = document.querySelectorAll('.controls input')
 
+
+//Select color 
 function handleUpdate() {
-    var bColor = document.getElementById("Background").value
-    document.getElementById("draw").style.background = bColor;
     if (!selectedEraser) {
         var color = document.getElementById("base").value
         ctx.strokeStyle = color
@@ -50,15 +53,19 @@ function handleUpdate() {
 inputs.forEach(input => input.addEventListener('change', handleUpdate))
 inputs.forEach(input => input.addEventListener('mousemove', handleUpdate))
 
+
+//Eraser
 var selectedEraser = false
 
 function selectEraser() {
     selectedEraser = selectedEraser === true ? false : true
 
     if (selectedEraser) {
-        ctx.strokeStyle = document.getElementById("Background").value
+        ctx.strokeStyle = "#FFFFFF"
+        document.getElementById("eraser").style.background = "blue"
     } else {
         ctx.strokeStyle = document.getElementById("base").value
+        document.getElementById("eraser").style.background = "cadetblue"
     }
 
 }
