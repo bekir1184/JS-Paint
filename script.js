@@ -63,12 +63,13 @@ function selectEraser() {
 
     if (selectedEraser) {
         ctx.strokeStyle = "#FFFFFF"
-        document.getElementById("eraser").style.background = "blue"
         document.getElementById("draw").style.cursor = "url(eraser.png),auto"
+        document.getElementById("selectedItem").src = "eraser-big.png"
     } else {
         ctx.strokeStyle = document.getElementById("base").value
-        document.getElementById("eraser").style.background = "cadetblue"
         document.getElementById("draw").style.cursor = "url(pen.png),auto"
+        document.getElementById("selectedItem").src = "pen-big.png"
+
     }
 
 }
