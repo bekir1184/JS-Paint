@@ -25,6 +25,7 @@ function draw(e) {
     ctx.stroke();
     [lastX, lastY] = [e.offsetX, e.offsetY]
 
+
 }
 
 canvas.addEventListener('mousemove', draw)
@@ -63,9 +64,11 @@ function selectEraser() {
     if (selectedEraser) {
         ctx.strokeStyle = "#FFFFFF"
         document.getElementById("eraser").style.background = "blue"
+        document.getElementById("draw").style.cursor = "url(eraser.png),auto"
     } else {
         ctx.strokeStyle = document.getElementById("base").value
         document.getElementById("eraser").style.background = "cadetblue"
+        document.getElementById("draw").style.cursor = "url(pen.png),auto"
     }
 
 }
