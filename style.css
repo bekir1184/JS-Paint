@@ -19,13 +19,13 @@ h1 {
     line-height: 1;
 }
 
-div {
+.controls {
     display: flexbox;
     height: 50px;
     transition: height 1s;
 }
 
-div:hover {
+.controls:hover {
     height: 120px;
 }
 
@@ -33,4 +33,38 @@ canvas {
     background: white;
     margin-top: 1rem;
     cursor: url(images/pen.png), auto;
+}
+
+.colors {
+    display: flexbox;
+}
+
+.light-brown {
+    opacity: 0.5;
+    transition: 1s;
+}
+
+.light-brown:hover {
+    opacity: 1;
+    height: 250px;
+}
+
+.light-brown2 {
+    transition: 1s;
+    opacity: 0.5;
+}
+
+.light-brown2:hover {
+    opacity: 1;
+    height: 250px;
+}
+
+.brown {
+    opacity: 0.5;
+    transition: 1s;
+}
+
+.brown:hover {
+    opacity: 1;
+    height: 250px;
 }
