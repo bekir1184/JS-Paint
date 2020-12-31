@@ -12,12 +12,12 @@
 
 <body>
     <div class="controls">
-        <h1>JS Paint</h1>
-        <img id="selectedItem" src="pen-big.png" width="50" height="50" onclick="selectEraser()">
-        <label for="blur">Size:</label>
-        <input type="range" name="size" id="size" min="5" max="50" value="5">
+        <h1> <span class="js" style="color:yellow">JS</span>Paint</h1>
+        <img id="selectedItem" src="images/pen-big.png" width="50" height="50" onclick="selectEraser()">
         <label for="base">Color</label>
         <input type="color" name="base" id="base" value="#000000">
+        <label for="size">Size:</label>
+        <input type="range" name="size" id="size" min="5" max="50" value="5">
     </div>
     <canvas id="draw" width="800" height="100" style="border:3px solid #000000 ;"> </canvas>
 
