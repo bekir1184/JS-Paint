@@ -39,32 +39,13 @@ canvas {
     display: flexbox;
 }
 
-.light-brown {
+.colors img {
     opacity: 0.5;
     transition: 1s;
 }
 
-.light-brown:hover {
+.colors img:hover {
     opacity: 1;
     height: 250px;
-}
-
-.light-brown2 {
-    transition: 1s;
-    opacity: 0.5;
-}
-
-.light-brown2:hover {
-    opacity: 1;
-    height: 250px;
-}
-
-.brown {
-    opacity: 0.5;
-    transition: 1s;
-}
-
-.brown:hover {
-    opacity: 1;
-    height: 250px;
+    width: 50px;
 }

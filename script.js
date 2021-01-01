@@ -73,3 +73,7 @@ function selectEraser() {
     }
 
 }
+
+function colorSelect(colorNum) {
+    this.classList.toggle('colors img:active')
+}
