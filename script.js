@@ -46,8 +46,6 @@ function handleUpdate() {
         var color = document.getElementById("base").value
         ctx.strokeStyle = color
     }
-
-
     var size = document.getElementById("size").value
     ctx.lineWidth = size
 }
@@ -75,5 +73,73 @@ function selectEraser() {
 }
 
 function colorSelect(colorNum) {
-    this.classList.toggle('colors img:active')
+    if (!selectedEraser) {
+        switch (colorNum) {
+            case 1:
+                ctx.strokeStyle = "#8a5253"
+                break;
+            case 2:
+                ctx.strokeStyle = "#6f5642"
+                break;
+            case 3:
+                ctx.strokeStyle = "#3e342c"
+                break;
+            case 4:
+                ctx.strokeStyle = "#5d292e"
+                break;
+            case 5:
+                ctx.strokeStyle = "#a31f20"
+                break;
+            case 6:
+                ctx.strokeStyle = "#bc4d23"
+                break;
+            case 7:
+                ctx.strokeStyle = "#dc891c"
+                break;
+            case 8:
+                ctx.strokeStyle = "#f3d302"
+                break;
+            case 9:
+                ctx.strokeStyle = "#92a720"
+                break;
+            case 10:
+                ctx.strokeStyle = "#63b01e"
+                break;
+            case 11:
+                ctx.strokeStyle = "#137937"
+                break;
+            case 12:
+                ctx.strokeStyle = "#01b2dc"
+                break;
+            case 13:
+                ctx.strokeStyle = "#13607e"
+                break;
+            case 14:
+                ctx.strokeStyle = "#142f7e"
+                break;
+            case 15:
+                ctx.strokeStyle = "#3d2869"
+                break;
+            case 16:
+                ctx.strokeStyle = "#5a2769"
+                break;
+            case 17:
+                ctx.strokeStyle = "#992472"
+                break;
+            case 18:
+                ctx.strokeStyle = "#b74095"
+                break;
+            case 19:
+                ctx.strokeStyle = "#7c7c7c"
+                break;
+            case 20:
+                ctx.strokeStyle = "#5a5a5a"
+                break;
+            case 21:
+                ctx.strokeStyle = "#343434"
+                break;
+            default:
+                break;
+        }
+    }
 }
