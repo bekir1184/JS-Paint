@@ -1,6 +1,6 @@
 const canvas = document.querySelector("#draw")
 const ctx = canvas.getContext('2d')
-canvas.width = window.innerWidth - 50
+canvas.width = window.innerWidth - 100
 canvas.height = window.innerHeight - 200
 ctx.strokeStyle = "#000000"
 ctx.lineJoin = 'round'
